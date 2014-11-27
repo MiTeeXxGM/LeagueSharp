@@ -1,0 +1,3 @@
+LeagueSharp
+===========
+Copyright MiTeeXxGM
