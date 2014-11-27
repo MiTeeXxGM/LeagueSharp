@@ -1,0 +1,13 @@
+C:\Users\Ayman\Desktop\Assambly\ShowMeTheTime\ShowMeTheTime\bin\Debug\ShowMeTheTime.exe.config
+C:\Users\Ayman\Desktop\Assambly\ShowMeTheTime\ShowMeTheTime\bin\Debug\ShowMeTheTime.exe
+C:\Users\Ayman\Desktop\Assambly\ShowMeTheTime\ShowMeTheTime\bin\Debug\ShowMeTheTime.pdb
+C:\Users\Ayman\Desktop\Assambly\ShowMeTheTime\ShowMeTheTime\bin\Debug\clipper_library.dll
+C:\Users\Ayman\Desktop\Assambly\ShowMeTheTime\ShowMeTheTime\bin\Debug\LeagueSharp.Common.dll
+C:\Users\Ayman\Desktop\Assambly\ShowMeTheTime\ShowMeTheTime\bin\Debug\LeagueSharp.dll
+C:\Users\Ayman\Desktop\Assambly\ShowMeTheTime\ShowMeTheTime\bin\Debug\LX-Orbwalker.dll
+C:\Users\Ayman\Desktop\Assambly\ShowMeTheTime\ShowMeTheTime\bin\Debug\SharpDX.dll
+C:\Users\Ayman\Desktop\Assambly\ShowMeTheTime\ShowMeTheTime\bin\Debug\SharpDX.Direct3D9.dll
+C:\Users\Ayman\Desktop\Assambly\ShowMeTheTime\ShowMeTheTime\bin\Debug\LeagueSharp.xml
+C:\Users\Ayman\Desktop\Assambly\ShowMeTheTime\ShowMeTheTime\obj\Debug\ShowMeTheTime.csprojResolveAssemblyReference.cache
+C:\Users\Ayman\Desktop\Assambly\ShowMeTheTime\ShowMeTheTime\obj\Debug\ShowMeTheTime.exe
+C:\Users\Ayman\Desktop\Assambly\ShowMeTheTime\ShowMeTheTime\obj\Debug\ShowMeTheTime.pdb
