@@ -21,7 +21,7 @@ namespace TheTime
             Config.SubMenu("Time").AddItem(new MenuItem("TimeActivate", "Time").SetValue(new KeyBind(88, KeyBindType.Press)));
             Config.AddToMainMenu();
             Game.OnGameUpdate += Game_OnGameUpdate;
-            Game.PrintChat("Time Assembly Loaded Successfuly... // Develepped By <font color='#00FFFF'> MiTeeXxGM </font>");
+            Game.PrintChat("Time Assembly Loaded Successfuly... // Developed  By <font color='#00FFFF'> MiTeeXxGM </font>");
 
         }
 
