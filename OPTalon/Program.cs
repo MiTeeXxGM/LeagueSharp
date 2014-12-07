@@ -105,7 +105,7 @@ namespace OPTalon
             Config.AddToMainMenu();
 
             Game.OnGameUpdate += OnGameUpdate;
-            //Drawing.OnDraw += OnDraw;
+            Drawing.OnDraw += OnDraw;
             Game.PrintChat("Talon Assambly Loaded Successfully !!!!!");
         }
 

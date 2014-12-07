@@ -1,1 +1,12 @@
 C:\Users\Ayman\Desktop\OP-Talon\OP-Talon\bin\Release\OP-Talon.exe.config
+C:\Users\Ayman\Documents\GitHub\LeagueSharp\OPTalon\bin\Release\OP-Talon.exe.config
+C:\Users\Ayman\Documents\GitHub\LeagueSharp\OPTalon\bin\Release\OP-Talon.exe
+C:\Users\Ayman\Documents\GitHub\LeagueSharp\OPTalon\bin\Release\OP-Talon.pdb
+C:\Users\Ayman\Documents\GitHub\LeagueSharp\OPTalon\bin\Release\LeagueSharp.Common.dll
+C:\Users\Ayman\Documents\GitHub\LeagueSharp\OPTalon\bin\Release\LeagueSharp.dll
+C:\Users\Ayman\Documents\GitHub\LeagueSharp\OPTalon\bin\Release\SharpDX.dll
+C:\Users\Ayman\Documents\GitHub\LeagueSharp\OPTalon\bin\Release\SharpDX.Direct3D9.dll
+C:\Users\Ayman\Documents\GitHub\LeagueSharp\OPTalon\bin\Release\LeagueSharp.xml
+C:\Users\Ayman\Documents\GitHub\LeagueSharp\OPTalon\obj\Debug\OP-Talon.csprojResolveAssemblyReference.cache
+C:\Users\Ayman\Documents\GitHub\LeagueSharp\OPTalon\obj\Debug\OP-Talon.exe
+C:\Users\Ayman\Documents\GitHub\LeagueSharp\OPTalon\obj\Debug\OP-Talon.pdb
