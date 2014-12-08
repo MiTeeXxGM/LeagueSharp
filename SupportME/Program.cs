@@ -14,22 +14,22 @@ namespace SupportME
 {
     class Program
     {
-        static SpeechSynthesizer sSynth = new SpeechSynthesizer();
-        static SpeechRecognitionEngine sRecognize = new SpeechRecognitionEngine();
-        static Choices speechList = new Choices();
-        static Grammar gr;
+        public static SpeechSynthesizer sSynth = new SpeechSynthesizer();
+        public static SpeechRecognitionEngine sRecognize = new SpeechRecognitionEngine();
+        public static Choices speechList = new Choices();
+        public static Grammar gr;
         public static Obj_AI_Hero Player { get { return ObjectManager.Player; } }
-        static Menu Config;
+        public static Menu Config;
         public static String time;
 
 
-        static Timer speechTimer;
-        static bool wantSpeech;
-        
+        public static Timer speechTimer;
+        public static bool wantSpeech;
 
 
 
-        static void Main(string[] args)
+
+        public static void Main(string[] args)
         {
             Game.PrintChat("Support Me loaded <font color='#00FFFF'>#MiTeeXxGM</font>");
             Config = new Menu("SupportMe", "SPM", true);
@@ -57,24 +57,24 @@ namespace SupportME
 
         }
 
-        private static void TimerCallBack(object state)
+        public static void TimerCallBack(object state)
         {
-           
-                    sRecognize.RequestRecognizerUpdate();
-                    sRecognize.LoadGrammar(gr);
-                    sRecognize.SpeechRecognized += sRecognize_SpeechRecognized;
-                    sRecognize.SetInputToDefaultAudioDevice();
-                    sRecognize.RecognizeAsync(RecognizeMode.Multiple);
-                    sRecognize.Recognize();
-               
+
+            sRecognize.RequestRecognizerUpdate();
+            sRecognize.LoadGrammar(gr);
+            sRecognize.SpeechRecognized += sRecognize_SpeechRecognized;
+            sRecognize.SetInputToDefaultAudioDevice();
+            sRecognize.RecognizeAsync(RecognizeMode.Multiple);
+            sRecognize.Recognize();
+
         }
-        static void sRecognize_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        public static void sRecognize_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             switch (e.Result.Text)
             {
                 case "show":
                     doshow();
-                    Game.PrintChat("Time Activated" );
+                    Game.PrintChat("Time Activated");
                     break;
                 case "hide":
                     dounshow();
@@ -86,14 +86,14 @@ namespace SupportME
             }
         }
 
-        private static void doshow()
+        public static void doshow()
         {
             Config.Item("TimeActivate").SetValue(true);
         }
 
-        private static void dounshow() 
+        public static void dounshow()
         {
-            Config.Item("TimeActivate").SetValue(!true);           
+            Config.Item("TimeActivate").SetValue(!true);
         }
 
         public static void Drawing_OnDraw(EventArgs args)
