@@ -21,79 +21,27 @@ namespace SupportME
         public static Obj_AI_Hero Player { get { return ObjectManager.Player; } }
         public static Menu Config;
         public static String time;
-
-
         public static Timer speechTimer;
-        public static bool wantSpeech;
-
-
-
-
         public static void Main(string[] args)
         {
-            Game.PrintChat("Support Me loaded <font color='#00FFFF'>#MiTeeXxGM</font>");
+
             Config = new Menu("SupportMe", "SPM", true);
             Config.AddSubMenu(new Menu("Options", "Options"));
             Config.SubMenu("Options").AddItem(new MenuItem("TimeActivate", "Show me The Time").SetValue(true));
             Config.SubMenu("Options").AddItem(new MenuItem("SS", "Show me seconds")).SetValue(true);
             Config.SubMenu("Options").AddItem(new MenuItem("MS", "Show me Mana Suggestions")).SetValue(true);
-            Config.AddSubMenu(new Menu("Enable", "enable"));
-            Config.SubMenu("enable").AddItem(new MenuItem("speech", "enable").SetValue(true));
-            Config.SubMenu("enable").AddItem(new MenuItem("speechinterval", "delay").SetValue(new Slider(1000, 250, 5000)));
+
 
             Config.AddToMainMenu();
-            Drawing.OnDraw += Drawing_OnDraw;
+
 
 
             speechList.Add(new string[] { "show", "hide" });
             gr = new Grammar(new GrammarBuilder(speechList));
+            speechTimer = new Timer(TimerCallBack, null, 0, 250);
 
-
-
-
-
-
-            speechTimer = new Timer(TimerCallBack, null, 0, Config.Item("speechinterval").GetValue<Slider>().Value);
-
-        }
-
-        public static void TimerCallBack(object state)
-        {
-
-            sRecognize.RequestRecognizerUpdate();
-            sRecognize.LoadGrammar(gr);
-            sRecognize.SpeechRecognized += sRecognize_SpeechRecognized;
-            sRecognize.SetInputToDefaultAudioDevice();
-            sRecognize.RecognizeAsync(RecognizeMode.Multiple);
-            sRecognize.Recognize();
-
-        }
-        public static void sRecognize_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
-        {
-            switch (e.Result.Text)
-            {
-                case "show":
-                    doshow();
-                    Game.PrintChat("Time Activated");
-                    break;
-                case "hide":
-                    dounshow();
-                    Game.PrintChat("Time DeActivated");
-                    break;
-                default:
-                    Game.PrintChat(e.Result.Text);
-                    break;
-            }
-        }
-
-        public static void doshow()
-        {
-            Config.Item("TimeActivate").SetValue(true);
-        }
-
-        public static void dounshow()
-        {
-            Config.Item("TimeActivate").SetValue(!true);
+            Game.PrintChat("Support Me loaded <font color='#00FFFF'>#MiTeeXxGM</font>");
+            Drawing.OnDraw += Drawing_OnDraw;
         }
 
         public static void Drawing_OnDraw(EventArgs args)
@@ -143,6 +91,47 @@ namespace SupportME
             #endregion
 
         }
+
+        public static void TimerCallBack(object state)
+        {
+
+            sRecognize.RequestRecognizerUpdate();
+            sRecognize.LoadGrammar(gr);
+            sRecognize.SpeechRecognized += sRecognize_SpeechRecognized;
+            sRecognize.SetInputToDefaultAudioDevice();
+            sRecognize.RecognizeAsync(RecognizeMode.Multiple);
+            sRecognize.Recognize();
+
+        }
+        public static void sRecognize_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        {
+            switch (e.Result.Text)
+            {
+                case "show":
+                    doshow();
+                    Game.PrintChat("Time Activated");
+                    break;
+                case "hide":
+                    dounshow();
+                    Game.PrintChat("Time DeActivated");
+                    break;
+                default:
+                    Game.PrintChat(e.Result.Text);
+                    break;
+            }
+        }
+
+        public static void doshow()
+        {
+            Config.Item("TimeActivate").SetValue(true);
+        }
+
+        public static void dounshow()
+        {
+            Config.Item("TimeActivate").SetValue(!true);
+        }
+
+
 
     }
 }
